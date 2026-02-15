@@ -615,7 +615,7 @@ function OrganizersSection() {
           </div>
         </AnimatedSection>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {organizers.map((person, index) => (
             <AnimatedSection key={person.name} delay={index * 0.08}>
               <Card
@@ -623,19 +623,19 @@ function OrganizersSection() {
                 style={{ background: "rgba(255,255,255,0.03)", backdropFilter: "blur(20px)" }}
                 data-testid={`card-organizer-${person.name.toLowerCase().replace(/\s+/g, '-')}`}
               >
-                <div className="p-6 flex items-center gap-4">
-                  <Avatar className="w-14 h-14 shrink-0" style={{ border: `2px solid ${person.color}40` }}>
+                <div className="p-8 flex flex-col items-center gap-4 text-center">
+                  <Avatar className="w-28 h-28 shrink-0" style={{ border: `3px solid ${person.color}50` }}>
                     {person.photo && <AvatarImage src={person.photo} alt={person.name} className="object-cover" />}
                     <AvatarFallback
-                      className="text-lg font-bold text-white"
+                      className="text-2xl font-bold text-white"
                       style={{ background: `${person.color}20` }}
                     >
                       {person.name.split(" ").map(n => n[0]).join("")}
                     </AvatarFallback>
                   </Avatar>
                   <div>
-                    <h3 className="font-bold text-white">{person.name}</h3>
-                    <p className="text-sm" style={{ color: person.color }}>{person.role}</p>
+                    <h3 className="text-lg font-bold text-white">{person.name}</h3>
+                    <p className="text-sm mt-1" style={{ color: person.color }}>{person.role}</p>
                   </div>
                 </div>
               </Card>
