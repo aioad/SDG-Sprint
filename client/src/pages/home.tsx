@@ -26,6 +26,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import williamSirImg from "@assets/William_Sir_1771197103927.png";
+import jaswinderSirImg from "@assets/WhatsApp_Image_2026-02-14_at_2.31.06_AM_1771197172065.jpeg";
 
 function AnimatedSection({ children, className = "", delay = 0 }: { children: React.ReactNode; className?: string; delay?: number }) {
   const ref = useRef(null);
@@ -160,7 +161,7 @@ const rules = [
 ];
 
 const organizers = [
-  { name: "Dr. Jaswinder Singh", role: "Professor & Head, Dept. of CSE", color: GOOGLE_BLUE, photo: "" },
+  { name: "Dr. Jaswinder Singh", role: "Professor & Head, Dept. of CSE", color: GOOGLE_BLUE, photo: jaswinderSirImg },
   { name: "Dr. Williamjeet Singh", role: "Assistant Professor, Dept. of CSE", color: GOOGLE_RED, photo: williamSirImg },
   { name: "Dashmeet Singh", role: "GDG on Campus Lead", color: GOOGLE_GREEN, photo: "" },
 ];
