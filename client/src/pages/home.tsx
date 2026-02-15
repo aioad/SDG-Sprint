@@ -24,7 +24,8 @@ import {
 import { SiGoogle, SiLinkedin, SiGithub, SiInstagram } from "react-icons/si";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import williamSirImg from "@assets/William_Sir_1771197103927.png";
 
 function AnimatedSection({ children, className = "", delay = 0 }: { children: React.ReactNode; className?: string; delay?: number }) {
   const ref = useRef(null);
@@ -159,9 +160,9 @@ const rules = [
 ];
 
 const organizers = [
-  { name: "Dr. Jaswinder Singh", role: "Professor & Head, Dept. of CSE", color: GOOGLE_BLUE },
-  { name: "Dr. Williamjeet Singh", role: "Assistant Professor, Dept. of CSE", color: GOOGLE_RED },
-  { name: "Dashmeet Singh", role: "GDG on Campus Lead", color: GOOGLE_GREEN },
+  { name: "Dr. Jaswinder Singh", role: "Professor & Head, Dept. of CSE", color: GOOGLE_BLUE, photo: "" },
+  { name: "Dr. Williamjeet Singh", role: "Assistant Professor, Dept. of CSE", color: GOOGLE_RED, photo: williamSirImg },
+  { name: "Dashmeet Singh", role: "GDG on Campus Lead", color: GOOGLE_GREEN, photo: "" },
 ];
 
 function Navbar() {
@@ -621,7 +622,8 @@ function OrganizersSection() {
                 data-testid={`card-organizer-${person.name.toLowerCase().replace(/\s+/g, '-')}`}
               >
                 <div className="p-6 flex items-center gap-4">
-                  <Avatar className="w-14 h-14 shrink-0">
+                  <Avatar className="w-14 h-14 shrink-0" style={{ border: `2px solid ${person.color}40` }}>
+                    {person.photo && <AvatarImage src={person.photo} alt={person.name} className="object-cover" />}
                     <AvatarFallback
                       className="text-lg font-bold text-white"
                       style={{ background: `${person.color}20` }}
