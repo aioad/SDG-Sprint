@@ -1,5 +1,6 @@
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { motion, useInView, AnimatePresence } from "framer-motion";
+import { useRef, useState, useEffect } from "react";
+import gdgLogo from "@assets/Correct_LOGO_1771194937596.png";
 import {
   MapPin,
   Calendar,
@@ -711,9 +712,88 @@ function Footer() {
   );
 }
 
+function SplashScreen({ onComplete }: { onComplete: () => void }) {
+  useEffect(() => {
+    const timer = setTimeout(onComplete, 4000);
+    return () => clearTimeout(timer);
+  }, [onComplete]);
+
+  return (
+    <motion.div
+      className="fixed inset-0 z-[100] bg-[#0a0a0a] flex items-center justify-center cursor-pointer"
+      onClick={onComplete}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.6, ease: "easeInOut" }}
+      data-testid="splash-screen"
+    >
+      <FloatingGlow color={GOOGLE_BLUE} className="w-72 h-72 -top-10 -left-10" />
+      <FloatingGlow color={GOOGLE_GREEN} className="w-64 h-64 bottom-10 right-10" />
+
+      <div className="relative z-10 flex flex-col items-center text-center px-6">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <img
+            src={gdgLogo}
+            alt="Google Developer Group On Campus PUP"
+            className="w-48 sm:w-64 mx-auto"
+            data-testid="img-gdg-logo"
+          />
+        </motion.div>
+
+        <motion.p
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 1.0, ease: [0.22, 1, 0.36, 1] }}
+          className="text-white/40 text-lg sm:text-xl tracking-wide mt-10"
+          data-testid="text-presents"
+        >
+          presents
+        </motion.p>
+
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.6, ease: [0.22, 1, 0.36, 1] }}
+          className="text-4xl sm:text-6xl font-bold tracking-tight mt-4"
+          data-testid="text-splash-title"
+        >
+          <span className="text-white">Tech</span>
+          <span
+            style={{
+              background: `linear-gradient(135deg, ${GOOGLE_BLUE}, ${GOOGLE_RED}, ${GOOGLE_YELLOW}, ${GOOGLE_GREEN})`,
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+            }}
+          >
+            Sprint
+          </span>
+          <span className="text-white"> 2.0</span>
+        </motion.h1>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 2.8 }}
+          className="mt-12 text-xs text-white/20"
+        >
+          Click anywhere to continue
+        </motion.div>
+      </div>
+    </motion.div>
+  );
+}
+
 export default function Home() {
+  const [showSplash, setShowSplash] = useState(true);
+
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-white overflow-x-hidden">
+      <AnimatePresence>
+        {showSplash && <SplashScreen onComplete={() => setShowSplash(false)} />}
+      </AnimatePresence>
       <Navbar />
       <HeroSection />
       <VenueSection />
