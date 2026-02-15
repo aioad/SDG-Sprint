@@ -18,8 +18,10 @@ import {
   Users,
   FileText,
   ChevronRight,
+  ChevronDown,
   Globe,
   ArrowRight,
+  HelpCircle,
 } from "lucide-react";
 import { SiGoogle, SiLinkedin, SiGithub, SiInstagram } from "react-icons/si";
 import { Button } from "@/components/ui/button";
@@ -175,6 +177,7 @@ function Navbar() {
     { label: "Timeline", href: "#timeline" },
     { label: "Resources", href: "#resources" },
     { label: "Team", href: "#organizers" },
+    { label: "FAQ", href: "#faq" },
   ];
 
   return (
@@ -704,6 +707,92 @@ function OrganizersSection() {
   );
 }
 
+function FAQSection() {
+  const faqs = [
+    {
+      question: "What is the theme of TechSprint 2.0?",
+      answer: "The event focuses exclusively on Sustainable Development Goals (SDGs). Projects must address real-world challenges like Clean Energy, Climate Action, or Social Equity.",
+    },
+    {
+      question: "Is it mandatory to use Google Technologies?",
+      answer: "Yes! To be eligible for prizes, teams must integrate at least one Google technology (e.g., Gemini API, Firebase, Google Cloud, or Flutter) into their final solution.",
+    },
+    {
+      question: "What is the team size requirement?",
+      answer: "Teams must consist of 4 to 5 members. This ensures a balanced mix of developers, designers, and presenters within each team.",
+    },
+    {
+      question: "What should we bring to the event?",
+      answer: "Bring your laptops, chargers, and any hardware you might need for your prototype. We will provide the internet, mentorship, and a platform to build!",
+    },
+  ];
+
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  return (
+    <section id="faq" className="relative py-24 overflow-hidden" data-testid="section-faq">
+      <FloatingGlow color={GOOGLE_BLUE} className="w-80 h-80 -left-10 top-20" />
+      <FloatingGlow color={GOOGLE_YELLOW} className="w-72 h-72 right-10 bottom-10" />
+
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <AnimatedSection>
+          <div className="text-center mb-16">
+            <span className="text-xs font-semibold tracking-widest uppercase" style={{ color: GOOGLE_BLUE }}>Got Questions?</span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mt-2 flex items-center justify-center gap-3" data-testid="text-faq-title">
+              <HelpCircle className="w-8 h-8" style={{ color: GOOGLE_BLUE }} />
+              Frequently Asked Questions
+            </h2>
+            <p className="text-white/40 mt-3">Everything you need to know about TechSprint 2.0</p>
+          </div>
+        </AnimatedSection>
+
+        <div className="flex flex-col gap-4">
+          {faqs.map((faq, index) => (
+            <AnimatedSection key={index} delay={index * 0.08}>
+              <Card
+                className="border-white/10 overflow-visible transition-all duration-300 cursor-pointer"
+                style={{
+                  background: "rgba(255,255,255,0.03)",
+                  backdropFilter: "blur(20px)",
+                  borderColor: openIndex === index ? `${GOOGLE_BLUE}40` : undefined,
+                }}
+                onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                data-testid={`card-faq-${index}`}
+              >
+                <div className="p-6">
+                  <div className="flex items-center justify-between gap-4">
+                    <h3 className="font-semibold text-white text-left" data-testid={`text-faq-question-${index}`}>{faq.question}</h3>
+                    <motion.div
+                      animate={{ rotate: openIndex === index ? 180 : 0 }}
+                      transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                      className="shrink-0"
+                    >
+                      <ChevronDown className="w-5 h-5 text-white/40" />
+                    </motion.div>
+                  </div>
+                  <AnimatePresence>
+                    {openIndex === index && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                        className="overflow-hidden"
+                      >
+                        <p className="text-white/50 mt-4 text-sm leading-relaxed" data-testid={`text-faq-answer-${index}`}>{faq.answer}</p>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+              </Card>
+            </AnimatedSection>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Footer() {
   return (
     <footer className="relative py-16 border-t border-white/5" data-testid="section-footer">
@@ -834,6 +923,7 @@ export default function Home() {
       <TimelineSection />
       <ResourcesSection />
       <OrganizersSection />
+      <FAQSection />
       <Footer />
     </div>
   );
