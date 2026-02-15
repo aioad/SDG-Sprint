@@ -171,6 +171,7 @@ function Navbar() {
   const links = [
     { label: "Venue", href: "#venue" },
     { label: "Themes", href: "#themes" },
+    { label: "Prizes", href: "#prizes" },
     { label: "Timeline", href: "#timeline" },
     { label: "Resources", href: "#resources" },
     { label: "Team", href: "#organizers" },
@@ -434,6 +435,62 @@ function ThemesSection() {
                   </span>
                   <h3 className="text-lg font-bold text-white mt-3 mb-2">{theme.title}</h3>
                   <p className="text-sm text-white/40 leading-relaxed">{theme.description}</p>
+                </div>
+              </Card>
+            </AnimatedSection>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function PrizesSection() {
+  const prizes = [
+    { place: "1st", label: "Winner", icon: Trophy, color: GOOGLE_YELLOW, gradient: "from-yellow-500/20 to-transparent" },
+    { place: "2nd", label: "1st Runner Up", icon: Trophy, color: GOOGLE_BLUE, gradient: "from-blue-500/20 to-transparent" },
+    { place: "3rd", label: "2nd Runner Up", icon: Trophy, color: GOOGLE_GREEN, gradient: "from-green-500/20 to-transparent" },
+    { place: "4th", label: "3rd Runner Up", icon: Trophy, color: GOOGLE_RED, gradient: "from-red-500/20 to-transparent" },
+  ];
+
+  return (
+    <section id="prizes" className="relative py-24 overflow-hidden" data-testid="section-prizes">
+      <FloatingGlow color={GOOGLE_YELLOW} className="w-96 h-96 -right-20 top-10" />
+      <FloatingGlow color={GOOGLE_RED} className="w-72 h-72 left-10 bottom-10" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <AnimatedSection>
+          <div className="text-center mb-16">
+            <span className="text-xs font-semibold tracking-widest uppercase" style={{ color: GOOGLE_YELLOW }}>Rewards & Recognition</span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mt-2" data-testid="text-prizes-title">Prizes for Top Teams</h2>
+            <p className="text-white/40 mt-3 max-w-xl mx-auto">Compete for exciting prizes and recognition across the top 4 positions</p>
+          </div>
+        </AnimatedSection>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {prizes.map((prize, index) => (
+            <AnimatedSection key={prize.place} delay={index * 0.1}>
+              <Card
+                className="group border-white/10 overflow-visible h-full transition-all duration-300"
+                style={{ background: "rgba(255,255,255,0.03)", backdropFilter: "blur(20px)" }}
+                data-testid={`card-prize-${prize.place}`}
+              >
+                <div className="p-8 flex flex-col items-center text-center gap-4">
+                  <div
+                    className="w-16 h-16 rounded-full flex items-center justify-center"
+                    style={{ background: `${prize.color}15` }}
+                  >
+                    <prize.icon className="w-8 h-8" style={{ color: prize.color }} />
+                  </div>
+                  <div
+                    className="text-4xl font-black"
+                    style={{ color: prize.color }}
+                    data-testid={`text-prize-place-${prize.place}`}
+                  >
+                    {prize.place}
+                  </div>
+                  <h3 className="text-lg font-bold text-white">{prize.label}</h3>
+                  <p className="text-sm text-white/40">Prize details to be announced</p>
                 </div>
               </Card>
             </AnimatedSection>
@@ -773,6 +830,7 @@ export default function Home() {
       <HeroSection />
       <VenueSection />
       <ThemesSection />
+      <PrizesSection />
       <TimelineSection />
       <ResourcesSection />
       <OrganizersSection />
