@@ -282,7 +282,7 @@ function HeroSection() {
           className="text-lg sm:text-xl text-white/50 mb-2 font-light"
           data-testid="text-hero-subtitle"
         >
-          3-Day Hackathon for Sustainable Development Goals
+          3-Day Ideathon+Hackathon for Sustainable Development Goals
         </motion.p>
 
         <motion.p
