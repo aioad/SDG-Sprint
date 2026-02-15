@@ -1,6 +1,7 @@
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import gdgLogo from "@assets/NEW_LOGO-removebg-preview_1771195095243.png";
+import uniLogo from "@assets/OIP-removebg-preview_1771195983791.png";
 import {
   MapPin,
   Calendar,
@@ -734,12 +735,18 @@ function SplashScreen({ onComplete }: { onComplete: () => void }) {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="flex items-center justify-center w-full"
+          className="flex items-center justify-center gap-6 sm:gap-10 w-full"
         >
+          <img
+            src={uniLogo}
+            alt="Punjabi University Patiala"
+            className="w-20 h-20 sm:w-28 sm:h-28 object-contain"
+            data-testid="img-uni-logo"
+          />
           <img
             src={gdgLogo}
             alt="Google Developer Group On Campus PUP"
-            className="w-96 sm:w-[30rem] object-contain translate-x-3 sm:translate-x-4"
+            className="w-72 sm:w-96 object-contain"
             data-testid="img-gdg-logo"
           />
         </motion.div>
