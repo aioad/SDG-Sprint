@@ -185,13 +185,7 @@ function Navbar() {
       style={{ backdropFilter: "blur(20px)", backgroundColor: "rgba(10, 10, 10, 0.8)" }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
-        <a href="#" className="flex items-center gap-3" data-testid="link-home">
-          <img
-            src={uniLogo}
-            alt="Punjabi University Patiala"
-            className="w-9 h-9 object-contain"
-            data-testid="img-uni-logo-nav-left"
-          />
+        <a href="#" className="flex items-center gap-2" data-testid="link-home">
           <div className="flex gap-1">
             <div className="w-2 h-2 rounded-full" style={{ background: GOOGLE_BLUE }} />
             <div className="w-2 h-2 rounded-full" style={{ background: GOOGLE_RED }} />
