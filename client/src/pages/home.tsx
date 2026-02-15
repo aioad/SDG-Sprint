@@ -65,7 +65,7 @@ const GOOGLE_RED = "#EA4335";
 const GOOGLE_YELLOW = "#FBBC05";
 const GOOGLE_GREEN = "#34A853";
 
-const REGISTER_URL = "#register";
+const REGISTER_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfuiajVfAZj8xD9s30M2Wea4dnqz6MlzeSadHrQFhAjAY1SQg/viewform";
 const TEAM_URL = "#organizers";
 const PPT_URL = "#";
 
