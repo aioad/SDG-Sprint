@@ -240,46 +240,19 @@ function HeroSection() {
 
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="flex items-center justify-center gap-4 sm:gap-8 mb-8 flex-wrap"
+          className="flex items-center justify-center mb-8"
         >
-          <motion.div
+          <motion.img
             animate={{ y: [0, -8, 0] }}
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            className="flex flex-col items-center gap-1"
-          >
-            <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-md flex items-center justify-center border border-white/10"
-              style={{ background: "rgba(255,255,255,0.05)", backdropFilter: "blur(10px)" }}>
-              <SiGoogle className="w-8 h-8 sm:w-10 sm:h-10" style={{ color: GOOGLE_BLUE }} />
-            </div>
-            <span className="text-[10px] text-white/40 mt-1">GDG</span>
-          </motion.div>
-
-          <motion.div
-            animate={{ y: [0, -8, 0] }}
-            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-            className="flex flex-col items-center gap-1"
-          >
-            <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-md flex items-center justify-center border border-white/10"
-              style={{ background: "rgba(255,255,255,0.05)", backdropFilter: "blur(10px)" }}>
-              <Globe className="w-8 h-8 sm:w-10 sm:h-10 text-white/70" />
-            </div>
-            <span className="text-[10px] text-white/40 mt-1">PU Patiala</span>
-          </motion.div>
-
-          <motion.div
-            animate={{ y: [0, -8, 0] }}
-            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-            className="flex flex-col items-center gap-1"
-          >
-            <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-md flex items-center justify-center border border-white/10"
-              style={{ background: "rgba(255,255,255,0.05)", backdropFilter: "blur(10px)" }}>
-              <Zap className="w-8 h-8 sm:w-10 sm:h-10" style={{ color: GOOGLE_YELLOW }} />
-            </div>
-            <span className="text-[10px] text-white/40 mt-1">TechSprint</span>
-          </motion.div>
+            src={uniLogo}
+            alt="Punjabi University Patiala"
+            className="w-28 h-28 sm:w-36 sm:h-36 object-contain"
+            data-testid="img-uni-logo-hero"
+          />
         </motion.div>
 
         <motion.div
