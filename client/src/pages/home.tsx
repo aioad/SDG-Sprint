@@ -329,7 +329,7 @@ function HeroSection() {
           <div className="w-1 h-1 rounded-full bg-white/20" />
           <div className="flex items-center gap-2">
             <Users className="w-4 h-4" />
-            <span>200+ Hackers</span>
+            <span>200+ Innovators</span>
           </div>
           <div className="w-1 h-1 rounded-full bg-white/20" />
           <div className="flex items-center gap-2">
