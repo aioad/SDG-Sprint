@@ -250,7 +250,7 @@ function HeroSection() {
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
             src={uniLogo}
             alt="Punjabi University Patiala"
-            className="w-40 h-40 sm:w-52 sm:h-52 object-contain"
+            className="w-48 h-48 sm:w-64 sm:h-64 object-contain"
             data-testid="img-uni-logo-hero"
           />
         </motion.div>
