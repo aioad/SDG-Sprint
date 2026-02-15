@@ -159,12 +159,9 @@ const rules = [
 ];
 
 const organizers = [
-  { name: "Arjun Sharma", role: "Lead Organizer", color: GOOGLE_BLUE },
-  { name: "Priya Singh", role: "Tech Lead", color: GOOGLE_RED },
-  { name: "Ravi Kumar", role: "Design Lead", color: GOOGLE_GREEN },
-  { name: "Simran Kaur", role: "Marketing Head", color: GOOGLE_YELLOW },
-  { name: "Vikram Patel", role: "Operations Manager", color: GOOGLE_BLUE },
-  { name: "Neha Gupta", role: "Sponsorship Lead", color: GOOGLE_RED },
+  { name: "Dr. Jaswinder Singh", role: "Professor & Head, Dept. of CSE", color: GOOGLE_BLUE },
+  { name: "Dr. Williamjeet Singh", role: "Assistant Professor, Dept. of CSE", color: GOOGLE_RED },
+  { name: "Dashmeet Singh", role: "GDG on Campus Lead", color: GOOGLE_GREEN },
 ];
 
 function Navbar() {
