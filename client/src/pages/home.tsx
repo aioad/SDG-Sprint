@@ -625,7 +625,7 @@ function OrganizersSection() {
               >
                 <div className="p-8 flex flex-col items-center gap-4 text-center">
                   <Avatar className="w-28 h-28 shrink-0" style={{ border: `3px solid ${person.color}50` }}>
-                    {person.photo && <AvatarImage src={person.photo} alt={person.name} className="object-cover" style={person.name.includes("Jaswinder") ? { objectPosition: "center 15%" } : undefined} />}
+                    {person.photo && <AvatarImage src={person.photo} alt={person.name} className="object-cover" style={person.name.includes("Jaswinder") ? { objectPosition: "center 15%" } : person.name.includes("Dashmeet") ? { objectPosition: "center 20%" } : undefined} />}
                     <AvatarFallback
                       className="text-2xl font-bold text-white"
                       style={{ background: `${person.color}20` }}
