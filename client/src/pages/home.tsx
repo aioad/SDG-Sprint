@@ -377,7 +377,7 @@ function VenueSection() {
                 <MapPin className="w-8 h-8" style={{ color: GOOGLE_BLUE }} />
               </div>
               <h3 className="text-2xl font-bold text-white mb-2" data-testid="text-venue-name">Punjabi University Patiala</h3>
-              <p className="text-white/40 mb-6">Main Auditorium & Computer Science Block</p>
+              <p className="text-white/40 mb-6">Room No. 207, UCOE Dept.</p>
               <div className="flex items-center justify-center gap-6 text-sm text-white/50 flex-wrap">
                 <div className="flex items-center gap-2">
                   <Calendar className="w-4 h-4" style={{ color: GOOGLE_YELLOW }} />
