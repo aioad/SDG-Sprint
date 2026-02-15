@@ -152,7 +152,6 @@ const rules = [
   "Teams must consist of 2-4 members.",
   "All projects must address one of the four SDG themes.",
   "Use of Google Technologies (Firebase, Google Cloud, Flutter, TensorFlow, etc.) is MANDATORY.",
-  "Original code only — no pre-built projects allowed.",
   "Teams must submit a working prototype with a pitch deck.",
   "Judging criteria: Innovation, Impact, Technical Implementation, and Presentation.",
   "All code must be pushed to a public GitHub repository.",
