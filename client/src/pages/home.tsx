@@ -1,6 +1,6 @@
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
-import gdgLogo from "@assets/Correct_LOGO_1771194937596.png";
+import gdgLogo from "@assets/NEW_LOGO-removebg-preview_1771195095243.png";
 import {
   MapPin,
   Calendar,
