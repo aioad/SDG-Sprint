@@ -149,7 +149,7 @@ const timeline = [
 ];
 
 const rules = [
-  "Teams must consist of 2-4 members.",
+  "Teams must consist of 4-5 members.",
   "All projects must address one of the four SDG themes.",
   "Use of Google Technologies (Firebase, Google Cloud, Flutter, TensorFlow, etc.) is MANDATORY.",
   "Teams must submit a working prototype with a pitch deck.",
