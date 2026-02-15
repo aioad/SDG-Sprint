@@ -211,6 +211,12 @@ function Navbar() {
               Register
             </Button>
           </a>
+          <img
+            src={uniLogo}
+            alt="Punjabi University Patiala"
+            className="w-9 h-9 object-contain ml-1"
+            data-testid="img-uni-logo-nav"
+          />
         </div>
       </div>
     </motion.nav>
@@ -735,18 +741,12 @@ function SplashScreen({ onComplete }: { onComplete: () => void }) {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="flex items-center justify-center gap-6 sm:gap-10 w-full"
+          className="flex items-center justify-center w-full"
         >
-          <img
-            src={uniLogo}
-            alt="Punjabi University Patiala"
-            className="w-20 h-20 sm:w-28 sm:h-28 object-contain"
-            data-testid="img-uni-logo"
-          />
           <img
             src={gdgLogo}
             alt="Google Developer Group On Campus PUP"
-            className="w-72 sm:w-96 object-contain"
+            className="w-72 sm:w-96 object-contain translate-x-3 sm:translate-x-4"
             data-testid="img-gdg-logo"
           />
         </motion.div>
