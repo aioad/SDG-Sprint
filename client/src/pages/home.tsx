@@ -738,7 +738,7 @@ function SplashScreen({ onComplete }: { onComplete: () => void }) {
           <img
             src={gdgLogo}
             alt="Google Developer Group On Campus PUP"
-            className="w-48 sm:w-64 mx-auto"
+            className="w-72 sm:w-96 mx-auto"
             data-testid="img-gdg-logo"
           />
         </motion.div>
