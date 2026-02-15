@@ -729,16 +729,17 @@ function SplashScreen({ onComplete }: { onComplete: () => void }) {
       <FloatingGlow color={GOOGLE_BLUE} className="w-72 h-72 -top-10 -left-10" />
       <FloatingGlow color={GOOGLE_GREEN} className="w-64 h-64 bottom-10 right-10" />
 
-      <div className="relative z-10 flex flex-col items-center text-center px-6">
+      <div className="relative z-10 flex flex-col items-center justify-center text-center px-6 w-full">
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+          className="flex items-center justify-center w-full"
         >
           <img
             src={gdgLogo}
             alt="Google Developer Group On Campus PUP"
-            className="w-72 sm:w-96 mx-auto"
+            className="w-72 sm:w-96 object-contain"
             data-testid="img-gdg-logo"
           />
         </motion.div>
