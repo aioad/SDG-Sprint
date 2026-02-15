@@ -67,7 +67,7 @@ const GOOGLE_GREEN = "#34A853";
 
 const REGISTER_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfuiajVfAZj8xD9s30M2Wea4dnqz6MlzeSadHrQFhAjAY1SQg/viewform";
 const TEAM_URL = "#organizers";
-const PPT_URL = "#";
+const PPT_URL = "https://docs.google.com/presentation/d/11zLOAuVuNhmsuZBIEs5m1XC1zXCESzIB2IIgdtFD4EQ/edit?slide=id.p1#slide=id.p1";
 
 const themes = [
   {
