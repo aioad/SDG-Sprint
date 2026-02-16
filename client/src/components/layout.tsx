@@ -88,7 +88,7 @@ function Footer() {
           </p>
 
           <div className="flex items-center justify-center gap-4 mb-8">
-            <a href="#" className="text-white/30 hover:text-white/60 transition-colors" data-testid="link-linkedin">
+            <a href="https://www.linkedin.com/school/punjabi-university-patiala/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className="text-white/30 hover:text-white/60 transition-colors" data-testid="link-linkedin">
               <SiLinkedin className="w-4 h-4" />
             </a>
             <a href="#" className="text-white/30 hover:text-white/60 transition-colors" data-testid="link-github">
