@@ -3,7 +3,6 @@ import { useLocation, Link } from "wouter";
 import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { SiLinkedin, SiGithub, SiInstagram } from "react-icons/si";
-import gdgLogo from "@assets/NEW_LOGO-removebg-preview_1771195095243.png";
 import {
   GOOGLE_BLUE,
   GOOGLE_RED,
@@ -87,10 +86,6 @@ function Footer() {
           <p className="text-sm text-white/30 mb-6">
             Punjabi University Patiala
           </p>
-
-          <div className="flex items-center justify-center gap-2 mb-8">
-            <img src={gdgLogo} alt="GDG on Campus" className="h-8 object-contain" />
-          </div>
 
           <div className="flex items-center justify-center gap-4 mb-8">
             <a href="#" className="text-white/30 hover:text-white/60 transition-colors" data-testid="link-linkedin">
