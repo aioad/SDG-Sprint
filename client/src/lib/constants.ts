@@ -61,7 +61,7 @@ export const timeline = [
       { time: "10:30 AM", label: "Ideathon Begin" },
       { time: "01:00 PM", label: "Progress Check-in" },
       { time: "02:00 PM", label: "Pitching Round" },
-      { time: "04:00 PM", label: "Results Announcements" },
+      { time: "04:00 PM", label: "Day-1 Concludes" },
     ],
     color: GOOGLE_BLUE,
     icon: Lightbulb,
@@ -71,11 +71,11 @@ export const timeline = [
     title: "Hackathon",
     date: "Build, Code & Innovate",
     events: [
-      { time: "10:00 AM", label: "Hackathon Begin" },
-      { time: "12:00 PM", label: "Lunch" },
+      { time: "09:30 AM", label: "Hackathon Begin" },
+      { time: "12:00 PM", label: "Progress Check-in(1)" },
       { time: "01:00 PM", label: "Challenge Chits" },
-      { time: "02:00 PM", label: "Progress Check-in" },
-      { time: "03:30 PM", label: "Wrap-Up" },
+      { time: "02:00 PM", label: "Progress Check-in(2)" },
+      { time: "04:30 PM", label: "Day-2 Conlcudes" },
     ],
     color: GOOGLE_YELLOW,
     icon: Users,
@@ -85,8 +85,8 @@ export const timeline = [
     title: "Demo & Awards",
     date: "Present & Celebrate",
     events: [
-      { time: "10:00 AM", label: "Entry" },
-      { time: "10:20 AM", label: "Final Presentations + Judging Panel Deliberation" },
+      { time: "09:30 AM", label: "Entry" },
+      { time: "10:00 AM", label: "Final Presentations + Judging Panel Deliberation" },
       { time: "01:00 PM", label: "Lunch" },
       { time: "02:00 PM", label: "Results Announcements + Awards Ceremony" },
       { time: "04:00 PM", label: "Event Concludes" },
@@ -108,7 +108,7 @@ export const rules = [
 
 export const organizers = [
   { name: "Dr. Jaswinder Singh", role: "Professor & Head, Dept. of CSE", color: GOOGLE_BLUE, photo: jaswinderSirImg },
-  { name: "Dr. Williamjeet Singh", role: "Assistant Professor (Faculty Advisor), Dept. of CSE", color: GOOGLE_RED, photo: williamSirImg },
+  { name: "Dr. Williamjeet Singh", role: "Assistant Professor (Faculty Advisor),      Dept. of CSE", color: GOOGLE_RED, photo: williamSirImg },
   { name: "Dashmeet Singh", role: "GDG on Campus PUP Organizer", color: GOOGLE_GREEN, photo: dashmeetImg },
 ];
 
