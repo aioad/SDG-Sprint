@@ -108,7 +108,8 @@ export const rules = [
 
 export const organizers = [
   { name: "Dr. Jaswinder Singh", role: "Professor & Head, Dept. of CSE", color: GOOGLE_BLUE, photo: jaswinderSirImg },
-  { name: "Dr. Williamjeet Singh", role: "Assistant Professor (Faculty Advisor),      Dept. of CSE", color: GOOGLE_RED, photo: williamSirImg },
+  { name: "Dr. Williamjeet Singh", role: "Assistant Professor (Faculty Advisor),      
+    Dept. of CSE", color: GOOGLE_RED, photo: williamSirImg },
   { name: "Dashmeet Singh", role: "GDG on Campus PUP Organizer", color: GOOGLE_GREEN, photo: dashmeetImg },
 ];
 
