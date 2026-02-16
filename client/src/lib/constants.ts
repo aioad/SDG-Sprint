@@ -68,7 +68,7 @@ export const timeline = [
   },
   {
     day: "Day 2",
-    title: "72hr Hackathon",
+    title: "Hackathon",
     date: "Build, Code & Innovate",
     events: [
       { time: "10:00 AM", label: "Hackathon Begin" },
